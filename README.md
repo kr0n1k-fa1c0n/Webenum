@@ -385,11 +385,6 @@ For issues or questions:
 
 ---
 
-## 📜 License
-
-Educational use only - Azrieli School of Continuing Studies, Technion
-
----
 
 **Version:** 1.0  
 **Last Updated:** November 2025  

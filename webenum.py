@@ -213,52 +213,51 @@ class WebEnum:
             "Scanning ports with naabu",
             self.files['naabu']
         )
-    
+
     def step4_httpx(self):
         """Step 4: HTTP probing with httpx"""
-        print(f"\n{Colors.HEADER}{'#'*60}{Colors.END}")
+        print(f"\n{Colors.HEADER}{'#' * 60}{Colors.END}")
         print(f"{Colors.HEADER}# STEP 4: HTTP PROBING{Colors.END}")
-        print(f"{Colors.HEADER}{'#'*60}{Colors.END}")
-        
+        print(f"{Colors.HEADER}{'#' * 60}{Colors.END}")
+
         input_file = os.path.join(self.output_dir, self.files['naabu'])
-        
+
         if not self.dry_run and not os.path.exists(input_file):
             print(f"{Colors.RED}[!] Input file not found: {input_file}{Colors.END}")
             return False
-        
+
         cmd = ['httpx', '-l', input_file, '-silent', '-follow-redirects']
-        
-        # Add Burp proxy if specified
+
+        # BURP PROXY ÜÇÜN DÜZGÜN YOL (Go tool-ları üçün)
         if self.burp_proxy:
-            os.environ['HTTP_PROXY'] = f'http://{self.burp_proxy}'
-            os.environ['HTTPS_PROXY'] = f'http://{self.burp_proxy}'
-            print(f"{Colors.YELLOW}[*] Using Burp proxy: {self.burp_proxy}{Colors.END}")
-        
+            cmd.extend(['-http-proxy', f'http://{self.burp_proxy}'])
+            print(f"{Colors.YELLOW}[*] Burp proxy enabled: {self.burp_proxy} (via -http-proxy){Colors.END}")
+
         return self.run_command(
             cmd,
             "Probing HTTP services with httpx",
             self.files['httpx']
         )
-    
+
     def step5_katana(self):
         """Step 5: Web crawling with katana"""
-        print(f"\n{Colors.HEADER}{'#'*60}{Colors.END}")
+        print(f"\n{Colors.HEADER}{'#' * 60}{Colors.END}")
         print(f"{Colors.HEADER}# STEP 5: WEB CRAWLING{Colors.END}")
-        print(f"{Colors.HEADER}{'#'*60}{Colors.END}")
-        
+        print(f"{Colors.HEADER}{'#' * 60}{Colors.END}")
+
         input_file = os.path.join(self.output_dir, self.files['httpx'])
-        
+
         if not self.dry_run and not os.path.exists(input_file):
             print(f"{Colors.RED}[!] Input file not found: {input_file}{Colors.END}")
             return False
-        
+
         cmd = ['katana', '-list', input_file, '-silent', '-d', '3']
-        
-        # Add Burp proxy if specified
+
+        # BURP PROXY ÜÇÜN DÜZGÜN YOL (Go tool-ları üçün)
         if self.burp_proxy:
-            os.environ['HTTP_PROXY'] = f'http://{self.burp_proxy}'
-            os.environ['HTTPS_PROXY'] = f'http://{self.burp_proxy}'
-        
+            cmd.extend(['-proxy', f'http://{self.burp_proxy}'])
+            print(f"{Colors.YELLOW}[*] Burp proxy enabled: {self.burp_proxy} (via -proxy){Colors.END}")
+
         return self.run_command(
             cmd,
             "Crawling URLs with katana",
