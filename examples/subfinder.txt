@@ -1,0 +1,15 @@
+www.tesla.com
+shop.tesla.com
+ir.tesla.com
+investor.tesla.com
+auth.tesla.com
+account.tesla.com
+api.tesla.com
+owners.tesla.com
+my.tesla.com
+charge.tesla.com
+service.tesla.com
+press.tesla.com
+forums.tesla.com
+energy.tesla.com
+solarroof.tesla.com

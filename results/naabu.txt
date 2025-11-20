@@ -1,0 +1,4 @@
+mail.akm.az:443
+mail.akm.az:80
+www.akm.az:443
+www.akm.az:80

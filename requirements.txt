@@ -1,0 +1,16 @@
+# WEBENUM - Python Dependencies
+
+# Core dependencies (none required for basic functionality)
+# The script uses only Python standard library
+
+# Optional: For LLM integration (Bonus feature)
+openai>=1.0.0
+
+# Note: ProjectDiscovery tools must be installed separately:
+# - subfinder
+# - dnsx
+# - naabu
+# - httpx
+# - katana
+#
+# Installation guide: https://github.com/projectdiscovery

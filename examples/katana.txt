@@ -1,0 +1,12 @@
+https://www.tesla.com/
+https://www.tesla.com/model3
+https://www.tesla.com/modely
+https://shop.tesla.com/category/vehicle-accessories
+https://auth.tesla.com/login
+https://account.tesla.com/vehicles
+https://api.tesla.com/v1/vehicles
+https://charge.tesla.com/findus
+https://www.tesla.com/energy/design
+https://ir.tesla.com/sec-filings
+https://www.tesla.com/support/api
+https://www.tesla.com/legal/privacy

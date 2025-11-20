@@ -1,0 +1,10 @@
+https://www.tesla.com
+https://shop.tesla.com
+https://auth.tesla.com
+https://account.tesla.com
+https://api.tesla.com
+https://charge.tesla.com
+https://ir.tesla.com
+https://energy.tesla.com
+https://owners.tesla.com
+https://service.tesla.com

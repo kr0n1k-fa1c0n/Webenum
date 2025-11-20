@@ -1,0 +1,29 @@
+{
+  "default_ports": [80, 443, 8080, 8443, 8000, 8888],
+  "burp_proxy": "127.0.0.1:8080",
+  "output_dir": "output",
+  "tools": {
+    "subfinder": {
+      "enabled": true,
+      "timeout": 300
+    },
+    "dnsx": {
+      "enabled": true,
+      "timeout": 180
+    },
+    "naabu": {
+      "enabled": true,
+      "timeout": 600
+    },
+    "httpx": {
+      "enabled": true,
+      "timeout": 300
+    },
+    "katana": {
+      "enabled": true,
+      "timeout": 600
+    }
+  },
+  "display_banner": true,
+  "verbose": true
+}

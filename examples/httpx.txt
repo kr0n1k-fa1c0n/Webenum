@@ -1,0 +1,7 @@
+https://www.tesla.com [200] [Tesla | Electric Cars, Solar & Clean Energy] [content-length: 98567] [cloudflare] [Next.js,React]
+https://shop.tesla.com [200] [Tesla Shop] [content-length: 124567] [Shopify]
+https://ir.tesla.com [200] [Tesla Investor Relations] [content-length: 45678] [cloudflare]
+https://auth.tesla.com [302] [Found] [cloudflare]
+https://api.tesla.com [403] [Forbidden] [content-length: 278] [AkamaiGHost]
+https://account.tesla.com [200] [My Tesla] [content-length: 34567] [cloudflare]
+https://charge.tesla.com [200] [Supercharger] [Fastly CDN] [content-length: 67890]
