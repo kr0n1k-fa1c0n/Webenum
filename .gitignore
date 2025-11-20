@@ -1,0 +1,18 @@
+# Output directories (heç vaxt GitHub-a getməsin!)
+results/
+result*/
+output/
+outputs/
+scan_*/
+*_results/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs & temp
+*.log
+*.tmp
+temp/
